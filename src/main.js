@@ -8,6 +8,7 @@ const sketch = (p) => {
 
   p.draw = () => {
     // Your drawing code here
+    p.ellipse(50, 50, p.mouseX, p.mouseY)
   };
 };
 
