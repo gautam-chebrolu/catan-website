@@ -157,13 +157,29 @@ export function setupP5_bios() {
       }
 
       if(p.mouseX > p.windowWidth/2 - p.windowWidth/12 - xradius && p.mouseX < p.windowWidth/2 - p.windowWidth/12 + xradius && p.mouseY > p.windowHeight/4.5 - yradius && p.mouseY < p.windowHeight/4.5 + yradius){
-        postData = {name: "Robert"}
-        alert("I see you are stuck in the past, focusing on the data and empirics. You need a growth mindset.")
+
+        if(confirm("Are you really sure you want vote for Robert?") == true){
+          prompt("What are you basing your vote for Robert on? ")
+          if(confirm("Like really sure?") == true){
+            if(confirm("Like really really really sure?") == true){
+              alert("I see you are stuck in the past, focusing on the data and empirics. You need a growth mindset. Your vote was recorded.")
+                postData = {name: "Robert"}
+            }
+          }
+        }
+
       }
 
       if(p.mouseX > p.windowWidth/2 + p.windowWidth/12 - xradius && p.mouseX < p.windowWidth/2 + p.windowWidth/12 + xradius && p.mouseY > p.windowHeight/4.5 - yradius && p.mouseY < p.windowHeight/4.5 + yradius){
+
+        if(confirm("Are you Varad?") == true){
+          alert("Ok that makes sense")
+        }
+        else{
+          prompt("For confirmation purposes, please state your name: ")
+          alert("I just don't get it. Why?")
+        }
         postData = {name: "Varad"}
-        alert("I don't get it. Are you Varad? If not, why?")
       }
 
 
@@ -187,16 +203,13 @@ export function setupP5_bios() {
         });
       }
 
-      p.httpGet(dataURL, 'json', false, function(response) {
-        p.print(response)
-        pollResults = response
-      });
-      // setTimeout(function () {
-      //   p.httpGet(dataURL, 'json', false, function(response) {
-      //     p.print(response)
-      //     pollResults = response
-      //   });
-      // }, 3000)
+
+      setTimeout(function () {
+        p.httpGet(dataURL, 'json', false, function(response) {
+          p.print(response)
+          pollResults = response
+        });
+      }, 1500)
 
 
 
