@@ -1,3 +1,10 @@
+#text-container img {
+    max-width: 50%; /* Make sure the image is responsive */
+    height: auto;   /* Maintain aspect ratio */
+    display: block; /* Remove bottom space */
+    margin: 0 auto 1rem; /* Center the image and add some margin below */
+  }
+
 /* Ensure body and html take full height */
 html, body {
     height: 100%;
@@ -42,9 +49,9 @@ html, body {
   
   /* Timer styling */
   #timer {
-    font-size: 3rem; /* Increase font size */
+    font-size: 2.5rem; /* Increase font size */
     background: rgba(208, 217, 212, 0);
-    padding: 5rem 1rem .25rem 1rem;
+    padding: 5rem .5rem .25rem .5rem;
     border-radius: 10px;
     margin-bottom: 1rem; /* Add space between timer and button */
     z-index: 2; /* Ensure the timer is on top */

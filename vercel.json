@@ -1,0 +1,6 @@
+{
+    "rewrites": [
+      { "source": "/bios", "destination": "/bios.html" }
+    ]
+  }
+  
