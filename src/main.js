@@ -11,7 +11,7 @@ export function setupP5() {
       canvas.parent('app'); // Attach the canvas to the div#app
       p.background(200);
       p.noStroke();
-      p.noCursor();
+      // p.noCursor();
     };
 
     p.windowResized = () => {
