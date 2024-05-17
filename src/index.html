@@ -13,20 +13,20 @@
     <nav>
         <a href="/">Home</a>
         <a href="/bios">Bios</a>
-        <a href="https://docs.google.com/spreadsheets/d/1b1v5wXmFNisoaZ05FmRcf0JE_WSBQdaamt9mQmIc8kg/edit?usp=sharing">Data</a>
+        <a href="https://docs.google.com/spreadsheets/d/1b1v5wXmFNisoaZ05FmRcf0JE_WSBQdaamt9mQmIc8kg/view?usp=sharing" target="_blank" rel="noopener noreferrer">Data</a>
     </nav>
     <canvas></canvas> <!-- Move the canvas to the top of the app container -->
     <div id="text-container">
       <img src="/images/catan-showdown.png" alt="The Catan Showdown"> <!-- Add your image here -->
       <h1> The Catan Showdown </h1>
       <p>Watch the 500th online Catan game between Gautam, Robert, and Varad</p>
-      <p>May 30th, 2024 7:30pm EST</p>
+      <p id="date">May 30th, 2024 7:30pm EST</p>
       <div id="timer" class="albert-sans-timer">Loading...</div> <!-- Timer div with unique class -->
       <a href="https://lu.ma/a541ctv3" class="button">RSVP</a> <!-- Button with link -->
     </div>
   </div>
+  <script type="module" src="/router.js"></script>
   <script type="module" src="/main.js"></script>
-  <!-- <script type="module" src="/router.js"></script> -->
 
 </body>
 </html>

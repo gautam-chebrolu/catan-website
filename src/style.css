@@ -49,13 +49,17 @@ html, body {
   
   /* Timer styling */
   #timer {
-    font-size: 2.5rem; /* Increase font size */
+    font-size: 2.75rem; /* Increase font size */
     background: rgba(208, 217, 212, 0);
-    padding: 5rem .5rem .25rem .5rem;
+    padding: 0rem .5rem 0rem .5rem;
     border-radius: 10px;
-    margin-bottom: 1rem; /* Add space between timer and button */
+    margin-bottom: .5rem; /* Add space between timer and button */
     z-index: 2; /* Ensure the timer is on top */
     color: #798C8C
+  }
+
+  #date {
+    padding: 5rem 0rem 0rem 0rem;
   }
   
   /* Button styling */
