@@ -20,7 +20,7 @@ export function setupP5() {
 
     p.draw = () => {
       // Your drawing code here
-      p.background(242, 239, 223);
+      p.background(242 - p.mouseX/50, 239 - p.mouseY/50, 223);
       p.fill(208, 217, 212);
       p.ellipse(p.mouseX, p.mouseY, 25, 25);
 

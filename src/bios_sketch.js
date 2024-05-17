@@ -10,6 +10,10 @@ export function setupP5_bios() {
     let xradius = p.windowWidth/14
     let yradius = p.windowHeight/40
 
+    let gname = "Gautam"
+    let rname = "Robert"
+    let vname = "Varad"
+
 
 
     p.preload = () => {
@@ -23,7 +27,7 @@ export function setupP5_bios() {
         pollResults = response
       });
 
-      setTimeout(pullData, 10000);
+      setTimeout(pullData, 30000);
     }
 
     p.setup = () => {
@@ -55,12 +59,16 @@ export function setupP5_bios() {
 
       p.rectMode(p.CORNER)
       p.rect(p.windowWidth/2 + p.windowWidth/4 - 25, p.windowHeight*(7/8), 50, -(a/m)*p.windowHeight/2, 1, 1, 10, 10)
-      p.fill(30, 195, 40)
+      p.text(a, p.windowWidth/2 + p.windowWidth/4, p.windowHeight*(7/8)+10)
+      p.fill(107, 166, 65)
       p.rect(p.windowWidth/2 - p.windowWidth/4 - 25, p.windowHeight*(7/8), 50, -(g/m)*p.windowHeight/2, 1, 1, 10, 10)
-      p.fill(24, 73, 181)
+      p.text(g, p.windowWidth/2 - p.windowWidth/4, p.windowHeight*(7/8)+10)
+      p.fill(63, 108, 220)
       p.rect(p.windowWidth/2 - p.windowWidth/12 - 25, p.windowHeight*(7/8), 50, -(r/m)*p.windowHeight/2, 1, 1, 10, 10)
-      p.fill(214, 36, 8)
+      p.text(r, p.windowWidth/2 - p.windowWidth/12, p.windowHeight*(7/8)+10)
+      p.fill(231, 63, 63)
       p.rect(p.windowWidth/2 + p.windowWidth/12 - 25, p.windowHeight*(7/8), 50, -(v/m)*p.windowHeight/2, 1, 1, 10, 10)
+      p.text(v, p.windowWidth/2 + p.windowWidth/12, p.windowHeight*(7/8)+10)
 
     }
 
@@ -86,32 +94,36 @@ export function setupP5_bios() {
       }
       p.rect(p.windowWidth/2 + p.windowWidth/4, p.windowHeight/4.5, xradius, yradius, 5)
       if(p.mouseX > p.windowWidth/2 - p.windowWidth/4 - xradius && p.mouseX < p.windowWidth/2 - p.windowWidth/4 + xradius && p.mouseY > p.windowHeight/4.5 - yradius && p.mouseY < p.windowHeight/4.5 + yradius){
-        p.fill(30, 145, 40)
+        p.fill(107, 116, 65)
       }
       else{
-        p.fill(30, 195, 40)
+        p.fill(107, 166, 65)
       }
       p.rect(p.windowWidth/2 - p.windowWidth/4, p.windowHeight/4.5, xradius, yradius, 5)
       if(p.mouseX > p.windowWidth/2 - p.windowWidth/12 - xradius && p.mouseX < p.windowWidth/2 - p.windowWidth/12 + xradius && p.mouseY > p.windowHeight/4.5 - yradius && p.mouseY < p.windowHeight/4.5 + yradius){
-        p.fill(24, 73, 131)
+        p.fill(107, 166, 65)
+        rname = "Gautam"
       }
       else{
-        p.fill(24, 73, 181)
+        p.fill(63, 108, 220)
+        rname = "Robert"
       }
       p.rect(p.windowWidth/2 - p.windowWidth/12, p.windowHeight/4.5, xradius, yradius, 5)
       if(p.mouseX > p.windowWidth/2 + p.windowWidth/12 - xradius && p.mouseX < p.windowWidth/2 + p.windowWidth/12 + xradius && p.mouseY > p.windowHeight/4.5 - yradius && p.mouseY < p.windowHeight/4.5 + yradius){
-        p.fill(164, 36, 8)
+        p.fill(181, 63, 63)
+        vname = "REALLY???"
       }
       else{
-        p.fill(214, 36, 8)
+        p.fill(231, 63, 63)
+        vname = "Varad"
       }
       p.rect(p.windowWidth/2 + p.windowWidth/12, p.windowHeight/4.5, xradius, yradius, 5)
 
       p.textSize(defaultFontSize)
       p.fill(250)
-      p.text("Gautam", p.windowWidth/2 - p.windowWidth/4, p.windowHeight/4.5)
-      p.text("Robert", p.windowWidth/2 - p.windowWidth/12, p.windowHeight/4.5)
-      p.text("Varad", p.windowWidth/2 + p.windowWidth/12, p.windowHeight/4.5)
+      p.text(gname, p.windowWidth/2 - p.windowWidth/4, p.windowHeight/4.5)
+      p.text(rname, p.windowWidth/2 - p.windowWidth/12, p.windowHeight/4.5)
+      p.text(vname, p.windowWidth/2 + p.windowWidth/12, p.windowHeight/4.5)
       p.textSize(defaultFontSize/1.5)
       p.text("All 3 are losers", p.windowWidth/2 + p.windowWidth/4, p.windowHeight/4.5)
 
@@ -136,18 +148,22 @@ export function setupP5_bios() {
 
       if(p.mouseX > p.windowWidth/2 + p.windowWidth/4 - xradius && p.mouseX < p.windowWidth/2 + p.windowWidth/4 + xradius && p.mouseY > p.windowHeight/4.5 - yradius && p.mouseY < p.windowHeight/4.5 + yradius){
         postData = {name: "All Three are Losers"}
+        alert("Nah man, you're the loser. Spending your time going onto some random website voting on some dweebs playing a board game online. Don't you have something better to do? JK please join us.")
       }
 
       if(p.mouseX > p.windowWidth/2 - p.windowWidth/4 - xradius && p.mouseX < p.windowWidth/2 - p.windowWidth/4 + xradius && p.mouseY > p.windowHeight/4.5 - yradius && p.mouseY < p.windowHeight/4.5 + yradius){
         postData = {name: "Gautam"}
+        alert("That's what's up. Good choice")
       }
 
       if(p.mouseX > p.windowWidth/2 - p.windowWidth/12 - xradius && p.mouseX < p.windowWidth/2 - p.windowWidth/12 + xradius && p.mouseY > p.windowHeight/4.5 - yradius && p.mouseY < p.windowHeight/4.5 + yradius){
         postData = {name: "Robert"}
+        alert("I see you are stuck in the past, focusing on the data and empirics. You need a growth mindset.")
       }
 
       if(p.mouseX > p.windowWidth/2 + p.windowWidth/12 - xradius && p.mouseX < p.windowWidth/2 + p.windowWidth/12 + xradius && p.mouseY > p.windowHeight/4.5 - yradius && p.mouseY < p.windowHeight/4.5 + yradius){
         postData = {name: "Varad"}
+        alert("I don't get it. Are you Varad? If not, why?")
       }
 
 
@@ -170,6 +186,17 @@ export function setupP5_bios() {
           console.error('Error fetching data:', error);
         });
       }
+
+      p.httpGet(dataURL, 'json', false, function(response) {
+        p.print(response)
+        pollResults = response
+      });
+      // setTimeout(function () {
+      //   p.httpGet(dataURL, 'json', false, function(response) {
+      //     p.print(response)
+      //     pollResults = response
+      //   });
+      // }, 3000)
 
 
 
