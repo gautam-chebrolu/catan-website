@@ -1,8 +1,102 @@
-body {
+/* Ensure body and html take full height */
+html, body {
+    height: 100%;
     margin: 0;
-    font-family: 'Arial', sans-serif;
+    padding: 0;
+    font-family: 'Albert Sans', sans-serif; /* Apply Albert Sans font to the whole website */
+    color: #333
+}
+  
+  /* Flexbox to center content and handle layout */
+  body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden; /* Prevent scrolling */
+  }
+
+  h1 {
+    font-size: 3rem;
+    margin-bottom: 0.5rem;
+  }
+  
+  p {
+    font-size: 1.2rem;
+    margin: .5rem;
   }
   
   #app {
-    /* Your Figma styles here */
+    width: 100%;
+    height: 100%;
+    display: flex; /* Use flexbox layout */
+    flex-direction: column;
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+    position: relative;
   }
+  
+  /* Center text container */
+  #text-container {
+    text-align: center;
+  }
+  
+  /* Timer styling */
+  #timer {
+    font-size: 3rem; /* Increase font size */
+    background: rgba(208, 217, 212, 0);
+    padding: 5rem 1rem .25rem 1rem;
+    border-radius: 10px;
+    margin-bottom: 1rem; /* Add space between timer and button */
+    z-index: 2; /* Ensure the timer is on top */
+    color: #798C8C
+  }
+  
+  /* Button styling */
+  .button {
+    display: inline-block;
+    padding: 0.5rem 2rem;
+    background-color: #798C8C; /* Button color */
+    color: #fff; /* Text color */
+    text-decoration: none; /* Remove default link underline */
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+    z-index: 3; /* Ensure the button is on top */
+
+  }
+  
+  .button:hover {
+    background-color: #798C8C; /* Button color on hover */
+    mix-blend-mode: multiply; /* Apply blend mode to multiply color with background */
+
+  }
+  
+  /* Ensure canvas fits within the viewport and is positioned behind other elements */
+  canvas {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1; /* Ensure the canvas is behind text elements */
+  }
+  
+  /* Menu styling */
+nav {
+  display: flex; /* Arrange menu items horizontally */
+  justify-content: center; /* Center menu items horizontally */
+  align-items: center; /* Center menu items vertically (optional) */
+  padding: 1rem; /* Add some padding */
+  order: 0;
+  position: fixed; top: 0;
+}
+
+nav a {
+  color: #798C8C; /* Text color for menu items */
+  text-decoration: none; /* Remove underline */
+  font-weight: bold; /* Make menu items bold (optional) */
+  padding: 0.5rem 2rem; /* Add some space between links */
+}
+
+nav a:hover {
+  color: #333; /* Change text color on hover */
+}
