@@ -1,9 +1,6 @@
 import p5 from 'p5';
-import { navigateTo, router } from './router.js';
-
 
 export function setupP5() {
-  let circleSize = 0;
 
   new p5((p) => {
     p.setup = () => {

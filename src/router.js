@@ -1,6 +1,7 @@
 import { setupP5 } from './main.js';
 import { startCountdown } from './countdown.js';
 import { setupP5_bios } from './bios_sketch.js';
+import { setupP5_poll } from './poll_sketch.js'
 
 // Router
 function navigateTo(url) {
@@ -12,6 +13,7 @@ function navigateTo(url) {
     const routes = {
       "/": "/index.html",
       "/bios": "/bios.html",
+      "/poll": "/poll.html",
     };
   
     const path = window.location.pathname;
@@ -28,6 +30,9 @@ function navigateTo(url) {
         }
         if (path === '/bios') {
           setupP5_bios();
+        }
+        if (path === '/poll') {
+          setupP5_poll();
         }
       });
   }

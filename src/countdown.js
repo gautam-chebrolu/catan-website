@@ -1,5 +1,5 @@
 export function startCountdown() {
-    const targetDate = new Date('May 29, 2024 19:30:00 EST').getTime();
+    const targetDate = new Date('May 30, 2024 19:30:00 EST').getTime();
     const timerElement = document.getElementById('timer');
   
     const updateTimer = () => {

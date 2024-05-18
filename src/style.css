@@ -1,9 +1,4 @@
-#text-container img {
-    max-width: 75%; /* Make sure the image is responsive */
-    height: auto;   /* Maintain aspect ratio */
-    display: block; /* Remove bottom space */
-    margin: 0 auto 1rem; /* Center the image and add some margin below */
-  }
+
 
 /* Ensure body and html take full height */
 html, body {
@@ -59,7 +54,7 @@ html, body {
   }
 
   #date {
-    padding: 5rem 0rem 0rem 0rem;
+    padding: 2rem 0rem 0rem 0rem;
   }
   
   /* Button styling */
@@ -74,6 +69,18 @@ html, body {
     z-index: 3; /* Ensure the button is on top */
 
   }
+
+
+
+  #text-container img {
+    max-width: 50%; /* Make sure the image is responsive */
+    max-height: 10rem;
+    height: auto;   /* Maintain aspect ratio */
+    display: block; /* Remove bottom space */
+    margin: 0 auto; /* Remove bottom margin */
+    padding-top: 2rem;
+  }
+
   
   .button:hover {
     background-color: #798C8C; /* Button color on hover */
@@ -110,4 +117,30 @@ nav a {
 
 nav a:hover {
   color: #333; /* Change text color on hover */
+}
+
+#audio {
+  display: none;
+}
+
+.image-container {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.image-container img {
+  max-width: 30%;
+  margin: 10px;
+}
+
+@media (max-width: 600px) {
+  .image-container {
+    flex-direction: column;
+  }
+
+  .image-container img {
+    max-width: 80%;
+  }
 }

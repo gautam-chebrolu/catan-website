@@ -6,19 +6,24 @@
   <title>Robert + Varad Getting Wrecked</title>
   <link rel="stylesheet" href="/style.css">
   <link href="https://fonts.googleapis.com/css2?family=Albert+Sans:wght@400;700&display=swap" rel="stylesheet">
+
 </head>
+
 <body>
 
   <div id="app">
+    <!-- <button id="muteButton">Mute</button> -->
+    <canvas></canvas> <!-- Move the canvas to the top of the app container -->
     <nav>
         <a href="/">Home</a>
         <a href="/bios">Bios</a>
+        <a href="/poll">Poll</a>
         <a href="https://docs.google.com/spreadsheets/d/1b1v5wXmFNisoaZ05FmRcf0JE_WSBQdaamt9mQmIc8kg/view?usp=sharing" target="_blank" rel="noopener noreferrer">Data</a>
     </nav>
-    <canvas></canvas> <!-- Move the canvas to the top of the app container -->
+    
     <div id="text-container">
-      <img src="/images/catan-showdown.png" alt="The Catan Showdown"> <!-- Add your image here -->
-      <h1> The Catan Showdown </h1>
+      <img src="/images/catan-showdown.png" alt="The Catan Showdown" class="showdownimage"> <!-- Add your image here -->
+      <img src="/images/catan-clash-logo.png" alt="Catan Clash Logo" class="logo">   
       <p>Watch the 500th online Catan game between Gautam, Robert, and Varad</p>
       <p id="date">May 30th, 2024 7:30pm EST</p>
       <div id="timer" class="albert-sans-timer">Loading...</div> <!-- Timer div with unique class -->
@@ -26,6 +31,7 @@
     </div>
   </div>
   <script type="module" src="/router.js"></script>
+  <script src="/background_music.js"></script>
   <script type="module" src="/main.js"></script>
 
 </body>
