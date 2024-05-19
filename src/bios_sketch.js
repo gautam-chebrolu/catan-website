@@ -33,8 +33,13 @@ export function setupP5_bios() {
       let imgWidth = p.windowWidth / cols;
       let imgHeight = imgWidth * (images[0].height / images[0].width);
 
+      if(p.windowWidth < 600){
+        imgWidth = imgWidth/2
+        imgHeight = imgHeight/2
+      }
+
       for (let i = 0; i < images.length; i++) {
-        let x = (i % cols) * imgWidth;
+        let x = (i % cols) * imgWidth + imgWidth/2;
         let y = Math.floor(i / cols) * imgHeight + p.windowHeight/8;
         p.image(images[i], x, y, imgWidth, imgHeight);
       }
